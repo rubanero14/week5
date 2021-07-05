@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Javascript Exercise</title>
+</head>
+<body>
+<h1>My Javascript Exercise</h1>
+
+<input type="text" name="username" id="username">
+
+<button onclick="sayHello()">Click Me!</button>
+
+<hr>
+<h2>Rock Paper Scissors</h2>
+
+<button onclick="buttonPressed(0)">Rock</button>
+<button onclick="buttonPressed(1)">Paper</button>
+<button onclick="buttonPressed(2)">Scissors</button>
+
+<script type="text/javascript">
+	var userScore = 0;
+	var compScore = 0;
+
+	function sayHello(){
+		var name = document.getElementById("username").value; 
+		alert('Hello '+name);
+	}
+	
+	function buttonPressed(userChoice) {
+		var computerChoice = Math.floor(Math.random()*2);
+		if (userChoice == 0){
+			if(computerChoice == 0){
+				alert("Computer select rock, It's a draw. The score is "+userScore+" : "+compScore);
+			} else if(computerChoice == 1){
+				compScore++ 
+				alert("Computer select paper, You lose.  The score is "+userScore+" : "+compScore);
+				
+			} else {
+				userScore++
+				alert("Computer select scissors, You Win!  The score is "+userScore+" : "+compScore);
+				
+			}
+
+
+		}
+		else if (userChoice == 1){
+			if (computerChoice == 0){
+				userScore++
+				alert("Computer select rock, You Win!  The score is "+userScore+" : "+compScore);
+				
+			} else if (computerChoice == 1){
+				alert("Computer select paper, It's a draw. The score is "+userScore+" : "+compScore);
+			} else {
+				compScore++ 
+				alert("Computer select scissors, You lose.  The score is "+userScore+" : "+compScore);
+				
+			}
+		}
+		else {
+			if (userChoice == 2){
+			if(computerChoice == 0){
+				compScore++ 
+				alert("Computer select rock, You lose.  The score is "+userScore+" : "+compScore);
+				
+			} else if(computerChoice == 1){
+				userScore++
+				alert("Computer select paper, You Win!  The score is "+userScore+" : "+compScore);
+				
+			} else {
+				alert("Computer select scissors, It's a draw. The score is "+userScore+" : "+compScore);
+			} 
+		}
+
+	}
+}
+
+</script>
+</body>
+</html>
