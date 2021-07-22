@@ -76,7 +76,7 @@ header a:hover {
 
 }
 #DN_logo {
-  opacity: 0.7;
+
   width: auto;
   height: 70px;
 }
@@ -90,6 +90,7 @@ header a:hover {
   background-color: black;
 }
 
+
 </style>
 
 <body>
@@ -102,7 +103,7 @@ header a:hover {
       <a class="nav-link" href="#welcome-section"> Hello</a>
       <a class="nav-link" href="#projects"> Portfolio</a>
       <a class="nav-link" href="#skills"> Skills</a>
-      <a class="nav-link" href="#contact"> Contact</a>
+      <a onclick="contactInfo()" class="nav-link" href="#contact"> Contact</a>
      </h3></nav></header>
 <br><br><br><br><br>
 <section id="welcome-section">
@@ -125,8 +126,16 @@ header a:hover {
 <br><br><br><br>
   <div> <h3>Contact Details</h3>
     <ul>
-      <li><a href="tel:+60142105569">Mobile</a></li>
-      <li><a href="mailto:rajarubancr@gmail.com?">Email</a></li>
+      <li><a id="mobile" href="tel:+60142105569">Mobile</a></li>
+      <li><a id="email" href="mailto:rajarubancr@gmail.com">Email</a></li>
     </ul>
   </div>
+  <script type="text/javascript">
+   
+    function contactInfo(){
+    var str1 = "Mobile: ";
+    var str2 = "Email: ";
+    alert(str1+"\n"+"tel:+60142105569"+"\n"+"\n"+str2+"\n"+"mailto:rajarubancr@gmail.com")}
+
+  </script>
 </section></body>
